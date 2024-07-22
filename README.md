@@ -26,18 +26,13 @@ def main():
         elif choice not in ('E', 'D'):
             print("Invalid choice. Please enter E, D, or Q.")
             continue
-
-        # Input the message
-        message = input("Enter your message: ")
-        
-        # Input the shift value
-        try:
+        message = input("Enter your message: ")  # Input the message
+        try:    # Input the shift value
             shift = int(input("Enter the shift value: "))
         except ValueError:
             print("Shift value must be an integer.")
             continue
-        
-        if choice == 'E':
+         if choice == 'E':
             print("Encrypted message:", encrypt(message, shift))
         elif choice == 'D':
             print("Decrypted message:", decrypt(message, shift))
